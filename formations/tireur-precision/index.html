@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Hélicoptère - BRM5</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Formation Hélicoptère</h1>
+    
+        <nav class="tab-buttons">
+            <button onclick="showTab('termes')">📖 Dictionnaire des Termes</button>
+            <button onclick="showTab('securite')">🚨 Règles de Sécurité</button>
+            <button onclick="showTab('preparation')">🛠️ Préparation et Démarrage</button>
+            <button onclick="showTab('embarquement')">🚁 Embarquement PN</button>
+            <button onclick="showTab('decollage')">✈️ Demande Décollage</button>
+            <button onclick="showTab('navigation')">🗺️ Navigation & Comms</button>
+            <button onclick="showTab('feu')">🔥 Demande Feu</button>
+            <button onclick="showTab('extraction')">🎯 Extraction & RTB</button>
+            <button onclick="showTab('avancees')">⚙️ Procédures Avancées</button>
+        </nav>
+    </header>
+    
+    <div id="termes" class="tab active">
+        <h2>📖 Dictionnaire des Termes</h2>
+        <p><b>Gunner</b> → Mitrailleur de bord, chargé de l’armement de l’hélicoptère.</p>
+        <p><b>RTB (Return to Base)</b> → Retour à la base.</p>
+        <p><b>Winchester</b> → Plus de munitions.</p>
+        <p><b>Wingman</b> → Coéquipier en formation aérienne, généralement un second hélicoptère qui suit le leader.</p>
+        <p><b>Zeus (CEMAT)</b> → Commandement supérieur, donne les autorisations d’engagement et directives stratégiques.</p>
+        <p><b>Bingo Fuel</b> → Niveau de carburant critique.</p>
+        <p><b>Break Break</b> → Message radio urgent.</p>
+        <p><b>Splash</b> → Cible détruite.</p>
+        <p><b>Eagle Down</b> → PN au sol (abattu ou blessé).</p>
+        <p><b>Extract Hot</b> → Extraction sous feu ennemi.</p>
+        <p><b>Fox-2</b> → Missile courte portée tiré.</p>
+        <p><b>Flare</b> → Contre-mesure thermique contre missiles.</p>
+        <p><b>Chaff</b> → Contre-mesure radar contre missiles.</p>
+        <p><b>ECM (Electronic Counter Measures)</b> → Brouillage électronique.</p>
+        <p><b>Rope</b> → Corde utilisée pour insertion rapide.</p>
+        <p><b>Chute-Ops</b> → Saut en parachute depuis l’hélico.</p>
+    </div>
+    
+    <div id="securite" class="tab">
+        <h2>🚨 Règles de Sécurité</h2>
+        <h3>📌 Zones Dangereuses :</h3>
+        <p>Distance sécurité : longueur hélice + 50%</p>
+        <p>Ne jamais passer sous les pales (même arrêtées)</p>
+        <p>Contourner rotor queue : interdiction passage arrière</p>
+        <p>Déplacement en approche : tête baissée, jamais courir</p>
+        <p>Attendre feu vert pilote/chef bord avant embarquement</p>
+        <p>Accès appareil uniquement côtés sécurisés</p>
+        <h3>📌 Sécurisation via Corde (Rope) et Chute-Ops :</h3>
+        <p>Rope : PN équipé harnais, pilote stabilise altitude</p>
+        <p>"Rope Ready" → Équipage fixe corde</p>
+        <p>"Rope Deployed" → Corde larguée, descente autorisée</p>
+        <p>"Rope Clear" → Dernier PN descendu, corde larguée</p>
+        <p>Chute-Ops : PN équipé parachute, pilote stabilise altitude</p>
+        <p>"Jump Ready" → Confirmation équipement</p>
+        <p>"Jump Go" → Autorisation saut</p>
+        <p>"Jump Clear" → Dernier PN sauté, extraction terminée</p>
+    </div>
+    
+    <div id="preparation" class="tab">
+        <h2>🛠️ Préparation et Démarrage</h2>
+        <p>"[num] TDC, demande perm allumage moteur, véhicule prêt."</p>
+        <p>"TDC [num], autorisation allumage engines."</p>
+        <p>"[num] TDC, engines on."</p>
+        <h3>📡 Communications internes (Intercom Hélico)</h3>
+        <p>"Pilote Équipage, check équipement, prêt départ ?"</p>
+        <p>"Équipage Pilote, matériel opérationnel."</p>
+        <p>"Pilote Gunner, contrôle armement ?"</p>
+        <p>"Gunner Pilote, armement prêt."</p>
+        <p>"Pilote Équipage, check harnais, fixation, préparation décollage."</p>
+    </div>
+    
+    <div id="embarquement" class="tab">
+        <h2>🚁 Embarquement PN</h2>
+        <p>"[num] PN, green light, montée autorisée."</p>
+        <p>"Équipage Pilote, PN installés, sécurisés."</p>
+    </div>
+
+    <div id="decollage" class="tab">
+        <h2>✈️ Demande Décollage</h2>
+        <p>"[num] TDC, perm décollage piste [Alpha …], couloir [Classique/Inversé], montée […%], direction [Mission]."</p>
+        <p>"Rampe fermée = Décollage"</p>
+        <h3>📌 Couloirs de Décollage :</h3>
+        <p>Classique : montée tout droit</p>
+        <p>Inverse : demi-tour après décollage</p>
+    </div>
+
+    <div id="navigation" class="tab">
+        <h2>🗺️ Navigation & Comms</h2>
+        <p>"[num] approche [Lieu/Objectif], attente confirmation descente."</p>
+        <p>"[num] TDC, perm atterrissage."</p>
+        <p>"TDC [num], autorisation accordée/refusée."</p>
+        <p>"[num] descente [Lieu/Objectif], préparation extraction."</p>
+        <h3>📡 Communications internes (En vol et sur zone d’opération)</h3>
+        <p>"Pilote Gunner, couverture secteur [Nord/Sud/Est/Ouest]."</p>
+        <p>"Gunner Pilote, contact hostiles / zone sécurisée."</p>
+        <p>"Pilote Équipage, préparation extraction, ouverture rampe imminente."</p>
+        <p>"Équipage Pilote, extraction prête."</p>
+        <p>"Pilote Équipage, extraction confirmée, fermeture rampe."</p>
+    </div>
+
+    <div id="feu" class="tab">
+        <h2>🔥 Demande Feu</h2>
+        <p>"[num] Zeus (CEMAT), perm ouverture feu position [Coordonnées]."</p>
+        <p>"Zeus [num], feu vert/rouge."</p>
+        <p>"[num] Gunner, engagement autorisé."</p>
+        <p>"Gunner Pilote, ouverture feu, élimination cible."</p>
+        <p>"Pilote Gunner, cessez-feu, nouvelle position demandée."</p>
+    </div>
+
+    <div id="extraction" class="tab">
+        <h2>🎯 Extraction & RTB</h2>
+        <p>"[num] PN, extraction terminée, retour à bord."</p>
+        <p>"[num] TDC, retour base, piste [Alpha …], demande atterrissage."</p>
+        <p>"TDC [num], autorisation accordée."</p>
+        <p>"[num] approche finale, atterrissage en cours."</p>
+        <p>"Équipage Pilote, PN sécurisés, mission accomplie."</p>
+    </div>
+
+    <div id="avancees" class="tab">
+        <h2>⚙️ Procédures Avancées</h2>
+        <h3>📌 Procédures Riposte (Engagement Défensif)</h3>
+        <p>"Pilote Gunner, lock missile, riposte immédiate."</p>
+        <p>"Gunner Pilote, Fox-2 engagé." (Missile courte portée tiré)</p>
+        <p>"Flare Flare Flare !" → Déploiement de contre-mesures</p>
+        <p>"Équipage, impact imminent, préparation choc !"</p>
+        <p>"PN évac immédiate, dispersion en formation Alpha."</p>
+        <h3>📌 Coordination Multi-Appareil (Vol en Escadre)</h3>
+        <p>"Lead [num], formation en place, check altitude/speed."</p>
+        <p>"Wingman [num], confirmation, couverture latérale."</p>
+        <p>"Lead à tous, passage hot zone, guns free si nécessaire."</p>
+        <p>"Escadre RTB, maintien formation serrée, approche Alpha."</p>
+        <h3>📌 Contre-Mesures Électroniques (ECM)</h3>
+        <p>"TDC [num], radar lock hostile, demande brouillage."</p>
+        <p>"Gunner Pilote, chaffs déployés, rupture axe direct."</p>
+        <p>"Manœuvre évasive, descente rapide, flare à intervalle."</p>
+    </div>
+
+    <div class="copyright">
+        <p>© 2024-2025 Shadow Legion - Tous droits réservés</p>
+    </div>
+    <a class="return" href="../../">Retour</a>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
